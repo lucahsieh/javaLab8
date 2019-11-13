@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<h:outputStylesheet library="css" name="styles.css" />
+	<title>Create New Suppliers</title>
+</h:head>
+<h:body>
+	<h1>Create New  Suppliers</h1>
+	<h:form>
+	
+		<h3>SupplierID</h3>
+		<h:inputText value="#{newSupplier.supplier.supplierID}" size="10" />
+		
+		<h3>SupplierName</h3>
+		<h:inputText value="#{newSupplier.supplier.supplierName}" size="10" />
+	
+		<h:commandButton value="Submit" action="#{newSupplier.submit}"/>
+		<br/>
+		<h:commandButton value="Back" action="#{newSupplier.back}"/>
+	</h:form>
+	<ui:debug/>
+</h:body>
+</html>

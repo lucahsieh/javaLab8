@@ -11,6 +11,7 @@ public class Supplier implements Serializable{
     private String address;
     private String city;
     private String postalCode;
+    private String stateOrProvince;
     private String country;
     private String phoneNumber;
     private String faxNumber;
@@ -18,8 +19,10 @@ public class Supplier implements Serializable{
     private String emailAddress;
     private String notes;
     
+    public Supplier() {}
+    
     public Supplier(int supplierID, String supplierName, String contactName, String contactTitle, String address,
-            String city, String postalCode, String country, String phoneNumber, String faxNumber, String paymentTerms,
+            String city, String postalCode,String stateOrProvince, String country, String phoneNumber, String faxNumber, String paymentTerms,
             String emailAddress, String notes) {
         super();
         this.supplierID = supplierID;
@@ -29,6 +32,7 @@ public class Supplier implements Serializable{
         this.address = address;
         this.city = city;
         this.postalCode = postalCode;
+        this.stateOrProvince = stateOrProvince;
         this.country = country;
         this.phoneNumber = phoneNumber;
         this.faxNumber = faxNumber;
@@ -91,6 +95,14 @@ public class Supplier implements Serializable{
 
     public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
+    }
+
+    public String getStateOrProvince() {
+        return stateOrProvince;
+    }
+
+    public void setStateOrProvince(String stateOrProvince) {
+        this.stateOrProvince = stateOrProvince;
     }
 
     public String getCountry() {
