@@ -13,12 +13,48 @@
 	<h1>Create New  Suppliers</h1>
 	<h:form>
 	
-		<h3>SupplierID</h3>
-		<h:inputText value="#{newSupplier.supplier.supplierID}" size="10" />
+		<span>SupplierID</span>
+		<h:inputText value="#{newSupplier.supplier.supplierID}" size="10" /><br/>
 		
-		<h3>SupplierName</h3>
-		<h:inputText value="#{newSupplier.supplier.supplierName}" size="10" />
-	
+		<span>SupplierName</span>
+		<h:inputText value="#{newSupplier.supplier.supplierName}" size="10" /><br/>
+
+		<span>ContactName</span>
+		<h:inputText value="#{newSupplier.supplier.contactName}" size="10" /><br/>
+		
+		<span>ContactTitle</span>
+		<h:inputText value="#{newSupplier.supplier.contactTitle}" size="10" /><br/>
+		
+		<span>Address</span>
+		<h:inputText value="#{newSupplier.supplier.address}" size="10" /><br/>
+		
+		<span>City</span>
+		<h:inputText value="#{newSupplier.supplier.city}" size="10" /><br/>
+		
+		<span>PostalCode</span>
+		<h:inputText value="#{newSupplier.supplier.postalCode}" size="10" /><br/>
+		
+		<span>StateOrProvince</span>
+		<h:inputText value="#{newSupplier.supplier.stateOrProvince}" size="10" /><br/>
+		
+		<span>Country</span>
+		<h:inputText value="#{newSupplier.supplier.country}" size="10" /><br/>
+		
+		<span>PhoneNumber</span>
+		<h:inputText value="#{newSupplier.supplier.phoneNumber}" size="10" /><br/>
+		
+		<span>FaxNumber</span>
+		<h:inputText value="#{newSupplier.supplier.faxNumber}" size="10" /><br/>
+		
+		<span>PaymentTerms</span>
+		<h:inputText value="#{newSupplier.supplier.paymentTerms}" size="10" /><br/>
+		
+		<span>EmailAddress</span>
+		<h:inputText value="#{newSupplier.supplier.emailAddress}" size="10" /><br/>
+		
+		<span>Notes</span>
+		<h:inputText value="#{newSupplier.supplier.notes}" size="10" /><br/>
+		
 		<h:commandButton value="Submit" action="#{newSupplier.submit}"/>
 		<br/>
 		<h:commandButton value="Back" action="#{newSupplier.back}"/>

@@ -12,6 +12,9 @@
 <h:body>
 	<h1>View All Suppliers</h1>
 	<h:form>
+		<h:inputText value="#{supplierListForm.keyword}" size="10" style="width:300px;"/>
+		<h:commandButton value="Search" action="#{supplierListForm.search}"/>
+	
 		<h:dataTable value="#{supplierListForm.list}" var="s"
 			styleClass="products" columnClasses="odd,even">
 			<h:column>
@@ -174,7 +177,7 @@
 		<br/>
 		<h:commandButton value="Save" action="#{supplierListForm.save}"/>
 		<br/>
-		<h:commandButton value="Back" action="index"/>
+		<h:commandButton value="Back" action="#{supplierListForm.back}"/>
 	</h:form>
 	<ui:debug/>
 </h:body>

@@ -24,10 +24,12 @@ public class SupplierListForm implements Serializable{
     @Inject
     private Conversation conversation;
     
+    private String keyword = "";
+    
     List<EditableSupplier> list;
     
     private void refreshList() {
-        Supplier[] suppliers = supplierManager.getAll();
+        Supplier[] suppliers = supplierManager.searchByName(keyword);
         list = new ArrayList<EditableSupplier>();
         for(int i = 0; i < suppliers.length; i++) {
             list.add(new EditableSupplier(suppliers[i]));
@@ -35,8 +37,6 @@ public class SupplierListForm implements Serializable{
     }
     
     public List<EditableSupplier> getList(){
-//        conversation.begin();
-
         if(list == null)
             refreshList();
         return list;
@@ -47,9 +47,24 @@ public class SupplierListForm implements Serializable{
         list = es;
     }
     
+    public String getKeyword() {
+        if (keyword == null)
+            keyword = "";
+        return keyword;
+    }
+
+    public void setKeyword(String keyword) {
+        this.keyword = keyword;
+    }
+
     public String deleteRow(EditableSupplier es) {
         supplierManager.remove(es.getSupplier());
         list.remove(es);
+        return null;
+    }
+    
+    public String search() {
+        refreshList();
         return null;
     }
     
@@ -61,6 +76,12 @@ public class SupplierListForm implements Serializable{
             }
         }
         return null;
+    }
+    
+    public String back() {
+        keyword = "";
+        list = null;
+        return "index";
     }
     
     
